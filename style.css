@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Boston Housing Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+       }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        h3 {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Boston Housing Price Prediction</h2>
+        <form action="/predict" method="post">
+            <label>CRIM:</label><input type="text" name="CRIM" />
+            <label>ZN:</label><input type="text" name="ZN" />
+            <label>INDUS:</label><input type="text" name="INDUS" />
+            <label>CHAS:</label><input type="text" name="CHAS" />
+            <label>NOX:</label><input type="text" name="NOX" />
+            <label>RM:</label><input type="text" name="RM" />
+            <label>AGE:</label><input type="text" name="AGE" />
+            <label>DIS:</label><input type="text" name="DIS" />
+            <label>RAD:</label><input type="text" name="RAD" />
+            <label>TAX:</label><input type="text" name="TAX" />
+            <label>PTRATIO:</label><input type="text" name="PTRATIO" />
+            <label>B:</label><input type="text" name="B" />
+            <label>LSTAT:</label><input type="text" name="LSTAT" />
+            <input type="submit" value="Predict" />
+        </form>
+
+        <!-- Use this for testing preview -->
+        <h3>Predicted Price: $24,500</h3>
+    </div>
+</body>
+</html>
